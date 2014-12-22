@@ -1,0 +1,15 @@
+DB Collections
+Question
+	Widget
+	Functional Areas
+	Data
+
+
+
+Let's start with a basic problem statement of an assessment platform. Let's create a basic assessment platform that can:
+- Define different types of questions and tag them to different functional areas
+- Load questions based on the choice of functional areas
+- Have a provision of populating the widget based on the type of question
+- Apply Javascript validations/features based on the type of widget
+- Have server side validation submitted answer based on the widget
+- Score based on the solution and the widget (can be very basic - correct/incorrect)

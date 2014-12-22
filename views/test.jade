@@ -1,0 +1,17 @@
+extends layout
+
+block content
+	include components
+
+	div(ng-controller='TestController')
+		div(ng-view) Loading ......
+
+	script(type='text/ng-template' id='/partials/showTest.html')
+			div.col-md-8
+				div.row-fluid(ng-repeat="(key,field) in questions")
+					fieldset(ng-switch="questions[key].widget")
+						div(aj-text ng-switch-when="aj-text")
+						div(aj-picklist ng-switch-when="aj-picklist")
+						div(aj-radio ng-switch-when="aj-radio")
+				div.row-fluid
+					input.btn.btn-default(type="button" value="Submit Test" ng-click="submit()")

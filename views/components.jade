@@ -1,0 +1,17 @@
+div.componentTemplates
+	script#ajText(type='text/ng-template')
+		div.row-fluid
+			label.col-md-4.text-info.form-label {{questions[key].label}} {{questions[key].answer}}
+			div.col-md-4
+				input.form-control.input-form(ng-model="questions[key].answer" ritype="text")
+	script#ajPicklist(type='text/ng-template')
+		div.row-fluid
+			label.col-md-4.text-info.form-label {{questions[key].label}} {{questions[key].answer}}
+			div.col-md-4
+				select.form-control.input-form(ng-model="questions[key].answer" ng-options="opt for opt in questions[key].options")
+	script#ajRadio(type='text/ng-template')
+		div.row-fluid
+			label.col-md-4.text-info.form-label {{questions[key].label}} {{questions[key].answer}}
+			div.col-md-6
+				div.btn-group
+					button.btn.btn-default(type="button" btn-radio="obj.value" ng-selected="questions[key].answer=={{obj.value}}" ng-model="questions[key].answer" ng-repeat="obj in questions[key].options") {{obj.label}}
